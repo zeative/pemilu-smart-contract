@@ -1,2 +1,123 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Luxurious Gold Theme */
+@theme {
+  /* Colors */
+  --color-gold-50: #FFF9C4;
+  --color-gold-100: #FFF59D;
+  --color-gold-200: #FFF176;
+  --color-gold-300: #FFEE58;
+  --color-gold-400: #FBC02D;
+  --color-gold-500: #F9A825;
+  --color-gold-600: #F57F17;
+  --color-gold-700: #E65100;
+  --color-gold-800: #BF360C;
+  --color-gold-900: #8C2605;
+  
+  --color-charcoal-800: #1a1a1a;
+  --color-charcoal-900: #0a0a0a;
+  --color-charcoal-950: #050505;
+
+  /* Typography */
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Exo 2', sans-serif;
+
+  /* Spacing */
+  --spacing-container: 1280px;
+
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes shimmer {
+    from { background-position: 0 0; }
+    to { background-position: -200% 0; }
+  }
+}
+
+/* Base Styles */
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+  body {
+    @apply bg-charcoal-950 text-gold-50 font-body overflow-x-hidden antialiased;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(251, 191, 36, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.05) 0%, transparent 40%),
+      linear-gradient(to bottom, #050505, #0a0a0a);
+  }
+
+  /* Noise Texture */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Gold Utilities */
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #FFF59D 0%, #FBC02D 40%, #F57F17 60%, #FFF176 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(251, 192, 45, 0.2);
+  }
+
+  .border-gold-gradient {
+    border: 1px solid transparent;
+    background: 
+      linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+      linear-gradient(135deg, rgba(251, 192, 45, 0.6) 0%, rgba(245, 127, 23, 0.2) 50%, rgba(251, 192, 45, 0.6) 100%) border-box;
+  }
+  
+  .border-gold-thin {
+    border: 1px solid rgba(251, 192, 45, 0.2);
+  }
+
+  .bg-gold-sheen {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 50%,
+      rgba(255, 255, 255, 0.03) 100%
+    );
+  }
+
+  .shadow-gold-glow {
+    box-shadow: 
+      0 0 0 1px rgba(251, 192, 45, 0.1),
+      0 10px 30px -10px rgba(0, 0, 0, 0.5),
+      0 0 20px rgba(251, 192, 45, 0.05);
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 0 15px rgba(251, 192, 45, 0.3);
+  }
+
+  .etched-text {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.8);
+  }
+  
+  .beveled-panel {
+      box-shadow: 
+        inset 1px 1px 0 rgba(255, 255, 255, 0.05),
+        inset -1px -1px 0 rgba(0, 0, 0, 0.5),
+        0 4px 20px rgba(0,0,0,0.5);
+  }
+}
