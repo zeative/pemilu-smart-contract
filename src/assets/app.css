@@ -42,6 +42,10 @@
 }
 
 @layer base {
+    * {
+        @apply select-none;
+    }
+
     body {
         @apply bg-[url("/bg-basic.png")] bg-cover bg-top bg-no-repeat bg-fixed;
     }
