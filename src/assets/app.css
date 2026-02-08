@@ -42,7 +42,7 @@
 }
 
 @layer base {
-    * {
+    img {
         @apply select-none;
     }
 

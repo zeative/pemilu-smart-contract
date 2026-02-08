@@ -35,7 +35,7 @@ const candidates = [
     <div class="relative z-10 w-full max-w-[1600px] h-dvh flex flex-col justify-between py-4 px-6 md:py-8 overflow-hidden">
       <!-- Header: Compact -->
       <header class="text-center shrink-0 z-10000">
-        <h1 class="text-2xl md:text-4xl font-[Rubik_Distressed] uppercase tracking-[0.2em]" style="
+        <h1 class="text-2xl md:text-4xl font-black font-[Metal_Mania] uppercase tracking-[0.2em]" style="
           background: linear-gradient(180deg, #FBC02D 0%, #F9A825 50%, #BF8C00 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -57,7 +57,7 @@ const candidates = [
         </div>
 
         <!-- Card Wrapper -->
-        <div class="flex items-center justify-center mt-20 gap-2 md:gap-6 relative z-10 origin-center transition-transform duration-500">
+        <div class="flex items-center justify-center mt-10 gap-2 md:gap-6 relative z-10 origin-center transition-transform duration-500">
           {candidates.map((candidate) => <GoldCard {...candidate} />)}
         </div>
 
@@ -68,15 +68,15 @@ const candidates = [
       </div>
 
       <!-- Footer / Stats: Compact and Fixed to Bottom visually if needed -->
-      <div class="fixed bottom-3 left-3 z-50 text-[10px] text-slate-500 font-body max-w-xs hidden md:block leading-tight">
+      <!-- <div class="fixed bottom-3 left-3 z-50 text-[10px] text-slate-500 font-body max-w-xs hidden md:block leading-tight">
         <p>© 2026 Kohona Election Commission.</p>
         <p class="opacity-50">Authorized by the National Committee.</p>
-      </div>
+      </div> -->
 
       <!-- Stats panel (Horizontal now, no need for heavy scaling) -->
-      <div class="origin-bottom-right">
+      <!-- <div class="origin-bottom-right">
         <StatsPanel />
-      </div>
+      </div> -->
     </div>
   </main>
 </Layout>
