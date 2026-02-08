@@ -43,6 +43,6 @@
 
 @layer base {
     body {
-        @apply bg-[url("/bg.png")] bg-cover bg-top bg-no-repeat bg-fixed;
+        @apply bg-[url("/bg-basic.png")] bg-cover bg-top bg-no-repeat bg-fixed;
     }
 }
