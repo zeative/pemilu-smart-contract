@@ -16,8 +16,7 @@ import "../assets/app.css";
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet" />
   </head>
   <body>
-	<div class="bg-[url('/bg-mountain.png')] bg-cover bg-top bg-no-repeat bg-fixed mix-blend-multiply z-[9999]">
 		<slot />
-	</div>
+	<div class="fixed inset-0 z-9999 pointer-events-none bg-[url('/bg-mountain-transparent.png')] bg-cover bg-top bg-no-repeat bg-fixed brightness-[0.6] contrast-125"></div>
   </body>
 </html>
