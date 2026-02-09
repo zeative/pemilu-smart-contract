@@ -23,13 +23,13 @@ const { name, image, number, rotation = "0deg", delay = "0s", active = false } =
 
       <!-- Sepia/Gold Tone Filter on Image -->
       <img src={image} alt={name} class="w-full h-full object-cover object-top scale-110 sepia-[0.3] brightness-90 contrast-110" />
-
-      <!-- Scanline/Grid Overlay -->
-      <div class="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10 mix-blend-overlay z-10 pointer-events-none bg-size-[20px_20px]"></div>
     </div>
 
     <!-- Content Area with Gradient Background -->
-    <div class="absolute bottom-0 left-0 right-0 h-[30%] z-20" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);">
+    <div
+      class="absolute bottom-0 left-0 right-0 h-[30%] z-20"
+      style="background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);"
+    >
       <!-- Candidate Number Badge -->
       <div class="absolute -top-12 right-6">
         <div
