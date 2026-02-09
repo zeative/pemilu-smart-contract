@@ -1,20 +1,36 @@
 ---
 import "../assets/app.css";
+import StatsPanel from "../components/StatsPanel.astro";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Sipeko Smart Contract" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <title>Sistem Pemilihan Umum di Konoha dengan Blockchain Smart Contract by zaadevofc</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Rubik+Distressed&display=swap" rel="stylesheet" />
   </head>
   <body>
     <slot />
-    <div class="fixed inset-0 z-10 pointer-events-none bg-[url('/mountain-effects.png')] bg-cover bg-top bg-no-repeat bg-fixed brightness-[0.8] contrast-125"></div>
+    <div class="fixed inset-0 z-10 pointer-events-none bg-[url('/mountain-effects.png')] bg-cover bg-top bg-no-repeat bg-fixed brightness-[0.8] contrast-100"></div>
+
+    <div class="fixed bottom-3 left-3 z-10 text-[10px] text-slate-500 font-body max-w-xs hidden md:block leading-tight">
+      <p>© 2026 Kohona Election Commission.</p>
+      <p class="opacity-50">Authorized by the National Committee.</p>
+    </div>
+
+    <div class="origin-bottom-right fixed bottom-3 right-3 z-10">
+      <StatsPanel />
+    </div>
   </body>
 </html>
